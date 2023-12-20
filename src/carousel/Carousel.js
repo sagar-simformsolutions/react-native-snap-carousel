@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Animated, Easing, FlatList, I18nManager, Platform, ScrollView, View, ViewPropTypes } from 'react-native';
+import { Animated, Easing, FlatList, I18nManager, Platform, ScrollView, View,  } from 'react-native';
+import { ViewPropTypes} from 'deprecated-react-native-prop-types'
 import PropTypes from 'prop-types';
 import shallowCompare from 'react-addons-shallow-compare';
 import {
@@ -44,8 +45,7 @@ export default class Carousel extends Component {
         autoplayInterval: PropTypes.number,
         callbackOffsetMargin: PropTypes.number,
         containerCustomStyle: ViewPropTypes ? ViewPropTypes.style : View.propTypes.style,
-        containerCustomStyle: ViewPropTypes ? ViewPropTypes.style : View.propTypes ? View.propTypes.style : () => null,
-        enableMomentum: PropTypes.bool,
+        contentContainerCustomStyle: ViewPropTypes ? ViewPropTypes.style : View.propTypes.style,        enableMomentum: PropTypes.bool,
         enableSnap: PropTypes.bool,
         firstItem: PropTypes.number,
         hasParallaxImages: PropTypes.bool,
